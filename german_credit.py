@@ -26,6 +26,10 @@ def action(data):
     # Turn data into DataFrame
     data = pd.DataFrame([data])
     
+    # Change column names to lowercase to accomodate snowflake
+    data.columns = data.columns.str.strip().str.lower()
+
+    
     # There are only two unique values in data.number_people_liable.
     # Treat it as a categorical feature
     data.number_people_liable = data.number_people_liable.astype('object')
@@ -42,14 +46,23 @@ def action(data):
     data["predicted_score"] = logreg_classifier.predict(data[predictive_features])
     
     # MOC expects the action function to be a *yield* function
-    yield data.to_dict(orient="records")
+    yield data.to_dict(orient="records")[0]
 
 
 # modelop.metrics
 def metrics(data):
     
     data = pd.DataFrame(data)
-
+    
+    # Change column names to lowercase to accomodate snowflake
+    data.columns = data.columns.str.strip().str.lower()
+    
+    print("\nChecking input shape: ", data.shape, flush=True)
+    
+    print("\nChecking first 5 records:\n", flush=True)
+    
+    print(data.head())
+    
     # To measure Bias towards gender, filter DataFrame
     # to "score", "label_value" (ground truth), and
     # "gender" (protected attribute)
@@ -100,7 +113,15 @@ def metrics(data):
     1   gender          male               1.000000        1.000000
     """
 
-    output_metrics_df = disparity_metrics_df # or absolute_metrics_df
-
+    output_metrics_df = disparity_metrics_df[             # or absolute_metrics_df
+        disparity_metrics_df['attribute_value']=='female'  
+    ]
+    
+    output_metrics_df = output_metrics_df.replace({np.nan: None})
+    
+    out = output_metrics_df.to_dict(orient="records")[0]
+    
+    print("\nOutput: ", out, flush=True)
+    
     # Output a JSON object of calculated metrics
-    yield output_metrics_df.to_dict(orient="records")
+    yield out
