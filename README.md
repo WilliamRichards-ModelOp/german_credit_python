@@ -1,8 +1,11 @@
 # german_credit_python
  
 A Logistic Regression Python model to predict loan default.
+
+To run the attached Jupyter notebook, create a Python 3.6.9  virtual environments with the libraries versioned in `requirements.txt`.
+
 Model was trained on the German Credit Data dataset.
-logreg_classifier.pickle is the trained model artifact.
+`logreg_classifier.pickle` is the trained model artifact.
 Sample inputs to the scoring function are included (`df_baseline.json`, `df_sample.json`).
 
 Model code includes a metrics function used to compute Group and Bias metrics.
