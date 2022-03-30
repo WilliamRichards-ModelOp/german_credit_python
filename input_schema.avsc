@@ -1,236 +1,261 @@
 {
-  "name": "input_schema.avsc",
-  "type": "record",
-  "fields": [
-    {
-      "name": "id",
-      "type": "int",
-      "dataClass": "numerical",
-      "role": "identifier",
-      "protectedClass": false,
-      "driftCandidate": false,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "duration_months",
-      "type": "int",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "credit_amount",
-      "type": "float",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "installment_rate",
-      "type": "int",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "present_residence_since",
-      "type": "int",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "age_years",
-      "type": "int",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "number_existing_credits",
-      "type": "int",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "checking_status",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "credit_history",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "purpose",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "savings_account",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "present_employment_since",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "debtors_guarantors",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "property",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "installment_plans",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "housing",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "job",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "number_people_liable",
-      "type": "int",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "telephone",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "foreign_worker",
-      "type": "boolean",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "gender",
-      "type": "string",
-      "dataClass": "categorical",
-      "role": "predictor",
-      "protectedClass": true,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": true
-    },
-    {
-      "name": "label_value",
-      "type": "int",
-      "dataClass": "categorical",
-      "role": "label",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": true
-    },
-    {
-      "name": "score",
-      "type": "int",
-      "dataClass": "categorical",
-      "role": "score",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": true
-    }
-  ]
+    "fields": [
+        {
+            "dataClass": "numerical",
+            "driftCandidate": false,
+            "name": "id",
+            "protectedClass": false,
+            "role": "identifier",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "int"
+        },
+        {
+            "dataClass": "numerical",
+            "driftCandidate": true,
+            "name": "duration_months",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "int"
+        },
+        {
+            "dataClass": "numerical",
+            "driftCandidate": true,
+            "name": "credit_amount",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "float",
+            "isAmountField": true    
+        },
+        {
+            "dataClass": "numerical",
+            "driftCandidate": true,
+            "name": "installment_rate",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "int"
+        },
+        {
+            "dataClass": "numerical",
+            "driftCandidate": true,
+            "name": "present_residence_since",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "int"
+        },
+        {
+            "dataClass": "numerical",
+            "driftCandidate": true,
+            "name": "age_years",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "int"
+        },
+        {
+            "dataClass": "numerical",
+            "driftCandidate": true,
+            "name": "number_existing_credits",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "int"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "checking_status",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "credit_history",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "purpose",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "savings_account",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "present_employment_since",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "debtors_guarantors",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "property",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "installment_plans",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "housing",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "job",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "numerical",
+            "driftCandidate": true,
+            "name": "number_people_liable",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "int"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "telephone",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "foreign_worker",
+            "protectedClass": false,
+            "role": "predictor",
+            "scoringOptional": false,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "gender",
+            "protectedClass": true,
+            "role": "predictor",
+            "scoringOptional": true,
+            "specialValues": [
+            ],
+            "type": "string"
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "label_value",
+            "protectedClass": false,
+            "role": "label",
+            "scoringOptional": true,
+            "specialValues": [
+            ],
+            "type": "int",
+            "postiveClassLabel":1            
+        },
+        {
+            "dataClass": "categorical",
+            "driftCandidate": true,
+            "name": "score",
+            "protectedClass": false,
+            "role": "score",
+            "scoringOptional": true,
+            "specialValues": [
+            ],
+            "type": "int"
+        }
+    ],
+    "name": "input_schema.avsc",
+    "type": "record"
 }
