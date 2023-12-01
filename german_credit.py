@@ -10,7 +10,7 @@ from aequitas.preprocessing import preprocess_input_df
 from aequitas.group import Group
 from aequitas.bias import Bias 
 
-
+#swag
 # modelop.init
 def begin():
     
